@@ -1,0 +1,7 @@
+[workspace]
+members = ["db", "gentoken"]
+resolver = "2"
+
+[workspace.dependencies]
+anyhow = "1.0.95"
+sqlx = { version = "0.8.2", features = ["mysql", "runtime-tokio"] }
