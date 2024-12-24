@@ -1382,6 +1382,8 @@ dependencies = [
  "anyhow",
  "axum",
  "db",
+ "dotenvy",
+ "model",
  "sqlx",
  "tokio",
  "tracing",
