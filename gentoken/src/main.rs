@@ -1,9 +1,9 @@
-use clap::{Parser, Subcommand};
-use sqlx::MySqlPool;
-use getrandom::getrandom;
-use std::env;
-use db::token::{add_token, del_token};
 use base64::prelude::{Engine as _, BASE64_URL_SAFE_NO_PAD};
+use clap::{Parser, Subcommand};
+use db::token::{add_token, del_token};
+use getrandom::getrandom;
+use sqlx::MySqlPool;
+use std::env;
 
 #[derive(Parser)]
 struct Cli {
@@ -20,7 +20,7 @@ enum Commands {
     Del {
         #[arg(short)]
         bot_id: i64,
-    }
+    },
 }
 
 #[tokio::main]

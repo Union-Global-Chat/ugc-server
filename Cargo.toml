@@ -1,5 +1,5 @@
 [workspace]
-members = ["db", "gentoken"]
+members = ["db", "gentoken", "model", "server"]
 resolver = "2"
 
 [workspace.dependencies]
