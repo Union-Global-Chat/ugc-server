@@ -68,12 +68,9 @@ async fn websocket(stream: WebSocket, state: AppState) {
     });
     tokio::spawn(async move {
         while let Some(Ok(msg)) = receiver.next().await {
-            match msg {
-                Message::Ping(data) => {
-                    let mut sender_lock = sender.lock().await;
-                    sender_lock.send(Message::Pong(data)).await.unwrap()
-                }
-                _ => {}
+            if let Message::Ping(data) = msg {
+                let mut sender_lock = sender.lock().await;
+                sender_lock.send(Message::Pong(data)).await.unwrap()
             }
         }
     });

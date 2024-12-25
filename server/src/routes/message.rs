@@ -15,10 +15,10 @@ pub async fn create_message(
     state
         .tx
         .send(serde_json::to_string(&GatewayEvent::SendData(
-            SendDataEvent {
+            Box::new(SendDataEvent {
                 from_bot_id: token.bot_id,
                 data,
-            },
+            }),
         ))?)?;
     Ok(())
 }

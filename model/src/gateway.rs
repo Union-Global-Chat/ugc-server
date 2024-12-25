@@ -8,7 +8,7 @@ pub enum GatewayEvent {
     Hello,
     Identify(IdentifyEvent),
     Ready(String),
-    SendData(SendDataEvent),
+    SendData(Box<SendDataEvent>),
 }
 
 #[derive(Serialize, Deserialize)]
