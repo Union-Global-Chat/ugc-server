@@ -17,7 +17,7 @@ pub async fn create_message(
         .send(serde_json::to_string(&GatewayEvent::SendDataEvent(
             SendDataEvent {
                 from_bot_id: token.bot_id,
-                data: data,
+                data,
             },
         ))?)?;
     Ok(())
