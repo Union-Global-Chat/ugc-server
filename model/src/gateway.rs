@@ -3,11 +3,12 @@ use serde::{Deserialize, Serialize};
 use crate::data::Data;
 
 #[derive(Serialize, Deserialize)]
-#[serde(tag = "t", content = "c")]
+#[serde(tag = "t", content = "d")]
 pub enum GatewayEvent {
     Hello,
-    IdentifyEvent(IdentifyEvent),
-    SendDataEvent(SendDataEvent),
+    Identify(IdentifyEvent),
+    Ready(String),
+    SendData(SendDataEvent),
 }
 
 #[derive(Serialize, Deserialize)]
