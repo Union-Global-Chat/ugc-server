@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "DELETE FROM token WHERE bot_id = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "0e3158de9c2a80e70897262d6a260229cfea91884f8d5e822eef03c9188f2b34"
+}

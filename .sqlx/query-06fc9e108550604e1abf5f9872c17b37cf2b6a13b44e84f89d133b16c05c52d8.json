@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n        INSERT INTO\n            message\n            (\n                channel_name,\n                channel_id,\n                author_name,\n                author_discriminator,\n                author_id,\n                author_avatar_url,\n                author_bot,\n                guild_name,\n                guild_id,\n                guild_icon_url,\n                message_content,\n                message_id,\n                message_clean_content,\n                message_reference_channel_id,\n                message_reference_guild_id,\n                message_reference_message_id\n            )\n        VALUES\n            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\n        ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 16
+    },
+    "nullable": []
+  },
+  "hash": "06fc9e108550604e1abf5f9872c17b37cf2b6a13b44e84f89d133b16c05c52d8"
+}
