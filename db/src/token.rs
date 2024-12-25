@@ -13,3 +13,10 @@ pub async fn del_token(pool: &MySqlPool, bot_id: i64) -> anyhow::Result<()> {
         .await?;
     Ok(())
 }
+
+pub async fn get_token(pool: &MySqlPool, token: String) -> anyhow::Result<Option<i64>> {
+    let row = sqlx::query!("SELECT bot_id FROM token WHERE token = ?", token)
+        .fetch_optional(pool)
+        .await?;
+    Ok(row.map(|r| r.bot_id))
+}
