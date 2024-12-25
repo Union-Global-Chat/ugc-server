@@ -14,11 +14,11 @@ pub async fn create_message(
     add_message(&state.pool, data.clone()).await?;
     state
         .tx
-        .send(serde_json::to_string(&GatewayEvent::SendData(
-            Box::new(SendDataEvent {
+        .send(serde_json::to_string(&GatewayEvent::SendData(Box::new(
+            SendDataEvent {
                 from_bot_id: token.bot_id,
                 data,
-            }),
-        ))?)?;
+            },
+        )))?)?;
     Ok(())
 }
