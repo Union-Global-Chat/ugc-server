@@ -2,7 +2,7 @@
 Now developing...
 
 ## 環境変数
-- `DATABASE_URL` - mysql://<user>:<pass>@<host>:<port>/<database>
+- `DATABASE_URL` - `mysql://<user>:<pass>@<host>:<port>/<database>`
 
 ## サーバの起動
 ```sh
